@@ -18,7 +18,8 @@
   "bugs": "https://github.com/francoismassart/eslint-plugin-tailwindcss/issues",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha tests --recursive"
+    "test": "mocha tests --recursive",
+    "t": "mocha tests/lib/rules/no-defined-arbitrary-value --recursive"
   },
   "files": [
     "lib"
