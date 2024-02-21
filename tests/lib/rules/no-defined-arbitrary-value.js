@@ -40,6 +40,7 @@ const configOptions = [
             theme: {
               colors: {
                   gray: {
+                      DEFAULT: '#332233',
                       layout: '#f0f2f5',
                       flow: '#f0f2f5'
                   },
@@ -54,6 +55,7 @@ const configOptions = [
 const v2KeyMap = {
   "#f0f2f5": ["gray-layout", 'gray-flow'],
   "#123456": ["flow"],
+  "#332233": ["gray-DEFAULT"]
 }
 
 var generateErrors = (values) => {
@@ -91,9 +93,9 @@ ruleTester.run("no-arbitrary-value", rule, {
 
   invalid: [
     {
-      code: `<div class="flex bg-[#f0f2f5] text-[#123456]">Arbitrary width!</div>`,
-      output: `<div class="flex bg-gray-layout text-flow">Arbitrary width!</div>`,
-      errors: generateErrors("#f0f2f5 #123456"),
+      code: `<div class="flex bg-[#f0f2f5] text-[#123456] text-[#332233]">Arbitrary width!</div>`,
+      output: `<div class="flex bg-gray-layout text-flow text-gray">Arbitrary width!</div>`,
+      errors: generateErrors("#f0f2f5 #123456 #332233"),
       options: configOptions,
     },
     // {
