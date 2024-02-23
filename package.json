@@ -1,6 +1,6 @@
 {
   "name": "@baidu/eslint-plugin-tailwindcss-token-lint",
-  "version": "3.14.2-beta.3",
+  "version": "3.14.2-beta.4",
   "description": "Rules enforcing best practices while using Tailwind CSS",
   "keywords": [
     "eslint",

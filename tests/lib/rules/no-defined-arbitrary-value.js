@@ -93,9 +93,9 @@ ruleTester.run("no-arbitrary-value", rule, {
 
   invalid: [
     {
-      code: `<div class="flex bg-[#f0f2f5] text-[#123456] text-[#332233]">Arbitrary width!</div>`,
-      output: `<div class="flex bg-gray-layout text-flow text-gray">Arbitrary width!</div>`,
-      errors: generateErrors("#f0f2f5 #123456 #332233"),
+      code: `<div class="flex bg-[#f0f2f5] text-[#123456] text-[#332233] bg-[#F0F2F5]">Arbitrary width!</div>`,
+      output: `<div class="flex bg-gray-layout text-flow text-gray bg-gray-layout">Arbitrary width!</div>`,
+      errors: generateErrors("#f0f2f5 #123456 #332233 #f0f2f5"),
       options: configOptions,
     },
     // {
